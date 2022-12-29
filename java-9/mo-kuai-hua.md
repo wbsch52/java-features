@@ -17,7 +17,7 @@
 
 例子，共创建了两个模块：MODULE-A和MODULE-B，并在对应位置声明了_module-info.java_文件。
 
-<figure><img src="../.gitbook/assets/image (1).png" alt=""><figcaption></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (1) (1).png" alt=""><figcaption></figcaption></figure>
 
 MODULE-B中的Person类想要访问MODULE-A里的Car类，按照之前的方式只需要在classpath中引入MODULE-A即可。
 
@@ -27,10 +27,10 @@ MODULE-B中的Person类想要访问MODULE-A里的Car类，按照之前的方式�
 
 1. 在MODULE-A的_module-info.java_中使用_**exports**_关键字声明本模块中可以被外部访问的包。
 
-<figure><img src="../.gitbook/assets/image (2).png" alt=""><figcaption><p>MODULE-A module-info.java</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (2) (1).png" alt=""><figcaption><p>MODULE-A module-info.java</p></figcaption></figure>
 
 &#x20;2\. 在MODULE-B的_module-info.java_中使用_**requires**_关键字声明依赖的模块。&#x20;
 
-<figure><img src="../.gitbook/assets/image.png" alt=""><figcaption><p>MODULE-B module-info.java</p></figcaption></figure>
+<figure><img src="../.gitbook/assets/image (4).png" alt=""><figcaption><p>MODULE-B module-info.java</p></figcaption></figure>
 
 至此我们就实现了一个简单的模块封装、导出和依赖的流程，在MODULE-B中将能够顺利访问到MODULE-A里的Car类但无法访问CarPO类。
